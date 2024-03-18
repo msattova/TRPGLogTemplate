@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.md/ns#">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--- discord等で埋め込みが表示されるようにするためのOGP設定 --->
+    <meta
+      property="og:url"
+      content="http://hatosami.cloudfree.jp/trpg_log/template.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ログテンプレート案" />
+    <meta property="og:description" content="TRPGログを公開してます" />
+    <meta property="og:site_name" content="hatosami.cloudfree.jp" />
+    <meta name="twitter:card" content="ログ公開場所（ログ内容の概要など）" />
+    <!----->
+
+    <title>template</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="personalstyle.css" />
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">ログ　タイトル</h1>
+      <div class="nav">
+        <button
+          type="button"
+          id="js-buttonHamburger"
+          class="c-button p-hamburger"
+          aria-controls="global-nav"
+          aria-expanded="false"
+        >
+          <span class="p-hamburger__line">
+            <span class="u-visuallyHidden"> メニューを開閉する </span>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <nav class="navigation" id="js-nav" aria-hidden="true" inert>
+        <div class="check">
+          <input type="checkbox" name="imageclip" id="js-checkboxImageclip" />
+          <label for="imageclip">画像を切り抜いて表示</label>
+        </div>
+        <ul class="nav-list" id="charactor-list">
+          <li>
+            <div class="chara chara-1">
+              <div class="charactor-name">
+                ニコ (<a
+                  href="https://charasheet.vampire-blood.net/m6aef70f8f6984079911b987bbd7692a8"
+                  target="_blank"
+                  >キャラクターシート</a
+                >)
+              </div>
+              <div class="player-name">PC：里場</div>
+              <div class="charactor-image">
+                <img src="./pics/nico.png" alt="ニコの立ち絵" />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="chara chara-2">
+              <div class="charactor-name">
+                レーナ (<a
+                  href="https://yutorize.2-d.jp/ytsheet/sw2.5/?id=EoQyID"
+                  target="_blank"
+                  >キャラクターシート</a
+                >)
+              </div>
+              <div class="player-name">PC：里場</div>
+              <div class="charactor-image">
+                <img src="./pics/lena.png" alt="レーナの立ち絵" />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="chara chara-3">
+              <div class="charactor-name">
+                レイ (<a
+                  href="https://charasheet.vampire-blood.net/mded4370cbc481a8134eff55941dd771a"
+                  target="_blank"
+                  >キャラクターシート</a
+                >)
+              </div>
+              <div class="player-name">PC：里場</div>
+              <div class="charactor-image">
+                <img src="./pics/lei.png" alt="レイの立ち絵" />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="chara chara-4">
+              <div class="charactor-name">
+                レーヌ (<a
+                  href="https://charasheet.vampire-blood.net/m170816dfa90f9a3757b042c443869efc"
+                  target="_blank"
+                  >キャラクターシート</a
+                >)
+              </div>
+              <div class="player-name">PC：里場</div>
+              <div class="charactor-image">
+                <img src="./pics/langu.png" alt="レーヌの立ち絵" />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main" id="js-main">
+        <section class="participants">
+          <h2>参加者</h2>
+          <ul>
+            <li class="gm">GM</li>
+            <li class="chara-1">PL</li>
+            <li class="chara-2">PL</li>
+            <li class="chara-3">PL</li>
+            <li class="chara-4">PL</li>
+          </ul>
+        </section>
+        <section class="index">
+          <h2>目次</h2>
+          <ul>
+            <li class="preplay"><a href="#chara-make">キャラメイク</a></li>
+            <li class="chap"><a href="#act1">ACT 1</a></li>
+            <li class="chap"><a href="#act2">ACT 2</a></li>
+            <li class="chap"><a href="#act3">ACT 3</a></li>
+            <li class="chap"><a href="#act4">ACT 4</a></li>
+          </ul>
+        </section>
+        <section class="log" id="chara-make">
+          <h2>キャラメイク</h2>
+          <details>
+            <summary>クリックしてキャラメイクログを開く</summary>
+            <div class="chatlog">
+
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-2"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+            </div>
+          </details>
+        </section>
+        <section class="log">
+          <h2 id="act1">章題</h2>
+          <div class="chatlog">
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-2"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+          </div>
+        </section>
+        <section class="log">
+          <h2 id="act2">章題</h2>
+          <div class="chatlog">
+            <p class="message chara-1">
+              <span class="name">user</span>: 2d6
+              2d62d62d62d62d62d62d62d62d62d62d62d6
+              2d62d62d62d62d62d62d62d62d62d62d62d6
+              2d62d62d62d62d62d62d62d62d62d62d62d6
+              2d62d62d62d62d62d62d62d62d62d62d62d6
+              2d62d62d62d62d62d62d62d62d62d62d62d6
+              2d62d62d62d62d62d62d62d62d62d62d62d6
+              2d62d62d62d62d62d62d62d62d62d62d62d6
+              2d62d62d62d62d62d62d62d62d62d62d62d6
+              2d62d62d62d62d62d62d62d62d62d62d62d6
+              2d62d62d62d62d62d62d62d62d62d62d62d6
+            </p>
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-2"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+          </div>
+        </section>
+        <section class="log">
+          <h2 id="act3">章題</h2>
+          <div class="chatlog">
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-2"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+          </div>
+        </section>
+        <section class="log">
+          <h2 id="act4">章題</h2>
+          <div class="chatlog">
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-2"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+          </div>
+        </section>
+        <section class="log">
+          <h2 class="log">章題</h2>
+          <div class="chatlog">
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
+            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-2"><span class="name">user</span>: test</p>
+            <p class="message chara-3"><span class="name">user</span>: test</p>
+            <p class="message chara-4"><span class="name">user</span>: test</p>
+            <p class="message"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>: test</p>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <footer class="footer" id="js-footer">
+      <div>
+        <p>フッター</p>
+      </div>
+    </footer>
+  </body>
+
+  <script src="script.js"></script>
+</html>

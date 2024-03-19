@@ -40,13 +40,13 @@
 
   <div class="wrapper">
     <nav class="navigation" id="js-nav" aria-hidden="true" inert>
-      <div class="check">
-        <input type="checkbox" name="imageclip" id="js-checkboxImageclip" />
-        <label for="js-checkboxImageclip">画像を小さく表示</label>
-      </div>
       <div class="disable-check">
         <input type="checkbox" name="remove" id="js-checkboxRemove" checked />
         <label for="js-checkboxRemove">メインタブ以外を非表示</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" name="imageclip" id="js-checkboxImageclip" />
+        <label for="js-checkboxImageclip">画像を小さく表示</label>
       </div>
       <ul class="nav-list" id="charactor-list">
         <li>
@@ -123,84 +123,54 @@
           <details>
             <summary>クリックしてキャラメイクログを開く</summary>
             <div class="chatlog">
-              <p class="message chara-1">
-                <span class="name">user</span> 2d6
-              </p>
-              <p class="message chara-1 tab2">
-                <span class="name">
-                  user
-                </span> 2d6
-              </p>
-              <p class="message chara-2 tab3">
-                <span class="name">user</span> 2d6
-              </p>
-              <p class="message chara-3 tab2">
-                <span class="name">user</span> 2d6
-              </p>
-              <p class="message chara-4 tab2">
-                <span class="name">user</span> 2d6
-              </p>
-              <p class="message tab3">
-                <span class="name">user</span> test
-              </p>
-              <p class="message chara-3 tab2">
-                <span class="name">user</span> test
-              </p>
-              <p class="message chara-3 tab2">
-                <span class="name">user</span> test
-              </p>
-              <p class="message chara-4 tab2">
-                <span class="name">user</span> test
-              </p>
-              <p class="message chara-1 tab2">
-                <span class="name">user</span> test
-              </p>
-              <p class="message"><span class="name">user</span> test</p>
-              <p class="message"><span class="name">user</span> test</p>
-              <p class="message"><span class="name">user</span> test</p>
-              <p class="message chara-2">
-                <span class="name">user</span> test
-              </p>
-              <p class="message chara-3">
-                <span class="name">user</span> test
-              </p>
-              <p class="message chara-4">
-                <span class="name">user</span> test
-              </p>
-              <p class="message"><span class="name">user</span> test</p>
-              <p class="message chara-1">
-                <span class="name">user</span> test
-              </p>
+              <p class="message chara-1 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-1 tab2"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-2 tab3"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-3 tab2"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-4 tab2"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+              <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-3 tab2"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-4 tab3"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-1 tab3"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message tab1 diceroll"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-2 tab1 diceroll"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-4 tab1 diceroll"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+              <p class="message chara-1 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
             </div>
           </details>
         </section>
         <section class="chap" id="act1">
           <h2>章題</h2>
           <div class="chatlog">
-            <p class="message chara-1"><span class="name">user</span> 2d6</p>
-            <p class="message chara-1"><span class="name">user</span> 2d6</p>
-            <p class="message chara-2"><span class="name">user</span> 2d6</p>
-            <p class="message chara-3"><span class="name">user</span> 2d6</p>
-            <p class="message chara-4"><span class="name">user</span> 2d6</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-4"><span class="name">user</span> test</p>
-            <p class="message chara-1"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-2"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-4"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-1"><span class="name">user</span> test</p>
+            <p class="message chara-1 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-2 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab2"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab2"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab3"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab3"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab3"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1 diceroll"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-2 tab3"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab3"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab1 diceroll"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
           </div>
         </section>
         <section class="chap" id="act2">
           <h2>章題</h2>
           <div class="chatlog">
-            <p class="message chara-1">
+            <p class="message chara-1 tab1">
               <span class="name">user</span> 2d6
               2d62d62d62d62d62d62d62d62d62d62d62d6
               2d62d62d62d62d62d62d62d62d62d62d62d6
@@ -212,70 +182,70 @@
               2d62d62d62d62d62d62d62d62d62d62d62d6
               2d62d62d62d62d62d62d62d62d62d62d62d6
               2d62d62d62d62d62d62d62d62d62d62d62d6
-            </p>
-            <p class="message chara-1"><span class="name">user</span> 2d6</p>
-            <p class="message chara-2"><span class="name">user</span> 2d6</p>
-            <p class="message chara-3"><span class="name">user</span> 2d6</p>
-            <p class="message chara-4"><span class="name">user</span> 2d6</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-4"><span class="name">user</span> test</p>
-            <p class="message chara-1"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-2"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-4"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-1"><span class="name">user</span> test</p>
+            <span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-2 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-2 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
           </div>
         </section>
         <section class="chap" id="act3">
           <h2>章題</h2>
           <div class="chatlog">
-            <p class="message chara-1"><span class="name">user</span> 2d6</p>
-            <p class="message chara-1"><span class="name">user</span> 2d6</p>
-            <p class="message chara-2"><span class="name">user</span> 2d6</p>
-            <p class="message chara-3"><span class="name">user</span> 2d6</p>
-            <p class="message chara-4"><span class="name">user</span> 2d6</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-4"><span class="name">user</span> test</p>
-            <p class="message chara-1"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-2"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-4"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-1"><span class="name">user</span> test</p>
+            <p class="message chara-1 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-2 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-2 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
           </div>
         </section>
         <section class="chap" id="act4">
           <h2>章題</h2>
           <div class="chatlog">
-            <p class="message chara-1"><span class="name">user</span> 2d6</p>
-            <p class="message chara-1"><span class="name">user</span> 2d6</p>
-            <p class="message chara-2"><span class="name">user</span> 2d6</p>
-            <p class="message chara-3"><span class="name">user</span> 2d6</p>
-            <p class="message chara-4"><span class="name">user</span> 2d6</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-4"><span class="name">user</span> test</p>
-            <p class="message chara-1"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-2"><span class="name">user</span> test</p>
-            <p class="message chara-3"><span class="name">user</span> test</p>
-            <p class="message chara-4"><span class="name">user</span> test</p>
-            <p class="message"><span class="name">user</span> test</p>
-            <p class="message chara-1"><span class="name">user</span> test</p>
+            <p class="message chara-1 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-2 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-2 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-3 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-4 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
+            <p class="message chara-1 tab1"><span class="name">user</span> test<span class="timestamp">[00:00]</span></p>
           </div>
         </section>
       </div>

@@ -454,6 +454,7 @@ input[checkbox] {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  margin-right: 4px;
 }
 
 .chatlog span.timestamp {

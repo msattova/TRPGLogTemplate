@@ -1,0 +1,2 @@
+# TRPGLogTemplate
+TPRGログのデザイン案です

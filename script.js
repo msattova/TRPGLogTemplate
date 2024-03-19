@@ -5,6 +5,9 @@ const navigation = document.querySelector('#js-nav');
 const root = document.documentElement;
 
 const imageclipBox = document.querySelector('#js-checkboxImageclip');
+const removeNotMain = document.querySelector('#js-checkboxRemove');
+
+
 
 const scrollprevent = (e) => {
   e.preventDefault();
@@ -27,6 +30,10 @@ hamburgerButton.addEventListener('click', (e) => {
 
 imageclipBox.addEventListener('change', (e) => {
   document.querySelector('#charactor-list').classList.toggle("is-imageclip");
+})
+
+removeNotMain.addEventListener('change', (e) => {
+  mainArea.classList.toggle("is-disable");
 })
 
 // escapeキーでハンバーガーメニューを閉じる

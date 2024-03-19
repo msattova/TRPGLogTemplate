@@ -17,3 +17,15 @@
 .gm {
   color: black;
 }
+
+.gm::before {
+  content: 'GM: ';
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.pl::before {
+  content: 'PL: ';
+  font-weight: bold;
+  font-size: 1.2em;
+}

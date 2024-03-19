@@ -27,8 +27,9 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="title">ログ　タイトル</h1>
-      <div class="nav">
+      <div class="first-row">
+        <h1 class="title">ログ　タイトル</h1>
+        <div class="nav">
         <button
           type="button"
           id="js-buttonHamburger"
@@ -40,6 +41,13 @@
             <span class="u-visuallyHidden"> メニューを開閉する </span>
           </span>
         </button>
+        </div>
+      </div>
+      <div class="second-row">
+          <div class="disable-check">
+            <input type="checkbox" name="remove" id="js-checkboxRemove" checked/>
+            <label for="js-checkboxRemove">メインタブ以外を非表示</label>
+          </div>
       </div>
     </header>
 
@@ -47,7 +55,7 @@
       <nav class="navigation" id="js-nav" aria-hidden="true" inert>
         <div class="check">
           <input type="checkbox" name="imageclip" id="js-checkboxImageclip" />
-          <label for="imageclip">画像を切り抜いて表示</label>
+          <label for="js-checkboxImageclip">画像を小さく表示</label>
         </div>
         <ul class="nav-list" id="charactor-list">
           <li>
@@ -113,18 +121,18 @@
         </ul>
       </nav>
 
-      <main class="main" id="js-main">
+      <main class="main is-disable" id="js-main">
         <section class="participants">
           <h2>参加者</h2>
           <ul>
             <li class="gm">GM</li>
-            <li class="chara-1">PL</li>
-            <li class="chara-2">PL</li>
-            <li class="chara-3">PL</li>
-            <li class="chara-4">PL</li>
+            <li class="pl chara-1">PL</li>
+            <li class="pl chara-2">PL</li>
+            <li class="pl chara-3">PL</li>
+            <li class="pl chara-4">PL</li>
           </ul>
         </section>
-        <section class="index">
+        <section class="index" id="index">
           <h2>目次</h2>
           <ul>
             <li class="preplay"><a href="#chara-make">キャラメイク</a></li>
@@ -134,61 +142,61 @@
             <li class="chap"><a href="#act4">ACT 4</a></li>
           </ul>
         </section>
-        <section class="log" id="chara-make">
-          <h2>キャラメイク</h2>
+        <section class="preplay" id="chara-make">
+          <h2 id="chara-make">キャラメイク</h2>
           <details>
             <summary>クリックしてキャラメイクログを開く</summary>
             <div class="chatlog">
 
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-2"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>  2d6</p>
+            <p class="message chara-1 tab2"><span class="name">user</span>  2d6</p>
+            <p class="message chara-2 tab3"><span class="name">user</span>  2d6</p>
+            <p class="message chara-3 tab2"><span class="name">user</span>  2d6</p>
+            <p class="message chara-4 tab2"><span class="name">user</span>  2d6</p>
+            <p class="message tab3"><span class="name">user</span>  test</p>
+            <p class="message chara-3 tab2"><span class="name">user</span>  test</p>
+            <p class="message chara-3 tab2"><span class="name">user</span>  test</p>
+            <p class="message chara-4 tab2"><span class="name">user</span>  test</p>
+            <p class="message chara-1 tab2"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-2"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
             </div>
           </details>
         </section>
-        <section class="log">
+        <section class="chap">
           <h2 id="act1">章題</h2>
           <div class="chatlog">
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-2"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>  2d6</p>
+            <p class="message chara-1"><span class="name">user</span>  2d6</p>
+            <p class="message chara-2"><span class="name">user</span>  2d6</p>
+            <p class="message chara-3"><span class="name">user</span>  2d6</p>
+            <p class="message chara-4"><span class="name">user</span>  2d6</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-2"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
           </div>
         </section>
-        <section class="log">
+        <section class="chap">
           <h2 id="act2">章題</h2>
           <div class="chatlog">
             <p class="message chara-1">
-              <span class="name">user</span>: 2d6
+              <span class="name">user</span>  2d6
               2d62d62d62d62d62d62d62d62d62d62d62d6
               2d62d62d62d62d62d62d62d62d62d62d62d6
               2d62d62d62d62d62d62d62d62d62d62d62d6
@@ -200,92 +208,92 @@
               2d62d62d62d62d62d62d62d62d62d62d62d6
               2d62d62d62d62d62d62d62d62d62d62d62d6
             </p>
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-2"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>  2d6</p>
+            <p class="message chara-2"><span class="name">user</span>  2d6</p>
+            <p class="message chara-3"><span class="name">user</span>  2d6</p>
+            <p class="message chara-4"><span class="name">user</span>  2d6</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-2"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
           </div>
         </section>
-        <section class="log">
+        <section class="chap">
           <h2 id="act3">章題</h2>
           <div class="chatlog">
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-2"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>  2d6</p>
+            <p class="message chara-1"><span class="name">user</span>  2d6</p>
+            <p class="message chara-2"><span class="name">user</span>  2d6</p>
+            <p class="message chara-3"><span class="name">user</span>  2d6</p>
+            <p class="message chara-4"><span class="name">user</span>  2d6</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-2"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
           </div>
         </section>
-        <section class="log">
+        <section class="chap">
           <h2 id="act4">章題</h2>
           <div class="chatlog">
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-2"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>  2d6</p>
+            <p class="message chara-1"><span class="name">user</span>  2d6</p>
+            <p class="message chara-2"><span class="name">user</span>  2d6</p>
+            <p class="message chara-3"><span class="name">user</span>  2d6</p>
+            <p class="message chara-4"><span class="name">user</span>  2d6</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-2"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
           </div>
         </section>
         <section class="log">
           <h2 class="log">章題</h2>
           <div class="chatlog">
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-1"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-2"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-3"><span class="name">user</span>: 2d6</p>
-            <p class="message chara-4"><span class="name">user</span>: 2d6</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-2"><span class="name">user</span>: test</p>
-            <p class="message chara-3"><span class="name">user</span>: test</p>
-            <p class="message chara-4"><span class="name">user</span>: test</p>
-            <p class="message"><span class="name">user</span>: test</p>
-            <p class="message chara-1"><span class="name">user</span>: test</p>
+            <p class="message chara-1"><span class="name">user</span>  2d6</p>
+            <p class="message chara-1"><span class="name">user</span>  2d6</p>
+            <p class="message chara-2"><span class="name">user</span>  2d6</p>
+            <p class="message chara-3"><span class="name">user</span>  2d6</p>
+            <p class="message chara-4"><span class="name">user</span>  2d6</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-2"><span class="name">user</span>  test</p>
+            <p class="message chara-3"><span class="name">user</span>  test</p>
+            <p class="message chara-4"><span class="name">user</span>  test</p>
+            <p class="message"><span class="name">user</span>  test</p>
+            <p class="message chara-1"><span class="name">user</span>  test</p>
           </div>
         </section>
 
@@ -294,7 +302,7 @@
 
     <footer class="footer" id="js-footer">
       <div>
-        <p>フッター</p>
+        <!--権利表記など-->
       </div>
     </footer>
   </body>

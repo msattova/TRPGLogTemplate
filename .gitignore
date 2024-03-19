@@ -1,3 +1,7 @@
 *.ico
 pics/*
 *.png
+
+edit_workspace/*
+
+*.code-workspace

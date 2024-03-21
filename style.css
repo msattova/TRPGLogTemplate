@@ -231,10 +231,6 @@ html.is-drawerActive {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
-  display: grid;
-  grid-template-columns:
-    [name] auto
-    [message] 1fr;
 }
 
 /* main クラス関連 */
@@ -528,7 +524,7 @@ input[checkbox] {
 
 .chatlog .timestamp {
   color: hsl(225, 2%, 30%);
-  font-size: 10px;
+  font-size: 0.6em;
   margin: 0 16px 4px 0.8em;
 }
 

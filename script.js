@@ -8,11 +8,27 @@ const imageclipBox = document.querySelector('#js-checkboxImageclip');
 const removeNotMain = document.querySelector('#js-checkboxRemove');
 const removeTimestamp = document.querySelector('#js-timestampRemove');
 
+const mediaQuery = window.matchMedia('(min-width: 851px)');
 
+const handleAreaChange = (e) => {
+  if (e.matches) {
+    navigation.inert = false;
+    mainArea.inert = false;
+    footerArea.inert = false;
+    if (root.classList.contains("is-drawerActive")) {
+      root.classList.remove("is-drawerActive");
+    }
+  } else {
+    navigation.inert = !root.classList.contains("is-drawerActive");
+  }
+  console.log(navigation.inert);
+}
 
 const scrollprevent = (e) => {
   e.preventDefault();
 };
+
+mediaQuery.addEventListener('change', handleAreaChange);
 
 hamburgerButton.addEventListener('click', (e) => {
   const isExpanded = e.currentTarget.getAttribute("aria-expanded") !== "false";
@@ -25,7 +41,7 @@ hamburgerButton.addEventListener('click', (e) => {
   footerArea.inert = !footerArea.inert;
   navigation.inert = !navigation.inert;
   root.classList.toggle("is-drawerActive");
-
+  console.log(mainArea.inert, navigation.inert);
 })
 
 
@@ -51,4 +67,5 @@ document.addEventListener("keydown", (e) => {
   }
 })
 
+handleAreaChange(mediaQuery);
 

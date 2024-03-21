@@ -36,6 +36,11 @@ body {
   height: 65px;
 }
 
+.wrapper {
+  position: relative;
+  top: 60px;
+}
+
 .footer {
   position: relative;
   bottom: 0;
@@ -47,9 +52,7 @@ body {
 }
 
 .footer p {
-  margin: 0;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin: 0 8px;
 }
 
 .title {
@@ -93,8 +96,8 @@ body {
   border: 1px solid #000000;
   box-shadow: 0 0 2rem transparent;
   outline: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   margin-right: 12px;
 }
 
@@ -170,8 +173,8 @@ body {
   height: 100%;
   background-color: white;
   transform: translateX(100%);
-  -webkit-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
   z-index: 50;
   padding-top: 4em;
 }
@@ -229,7 +232,7 @@ html.is-drawerActive {
 .name::after {
   content: ": ";
   font-size: medium;
-  margin-right: 0.4em;
+  margin-right: .4em;
 }
 
 .text {
@@ -240,8 +243,8 @@ html.is-drawerActive {
 .message {
   display: grid;
   grid-template-columns: 1em min-content 1fr;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding-top: .2em;
+  padding-bottom: .2em;
   margin: 0;
   padding-left: 0;
   column-gap: 2px;
@@ -259,14 +262,14 @@ html.is-drawerActive {
   bottom: 0;
   overflow-wrap: break-word;
   word-break: break-all;
-  padding-top: 60px;
 }
 
 .main h2 {
   position: relative;
   padding: 1rem 2rem;
   border-bottom: 6px solid black;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
+  margin-bottom: .8em;
 }
 
 .main h2::first-letter {
@@ -289,8 +292,8 @@ html.is-drawerActive {
 }
 
 .main .main-logs section {
-  padding-top: 68px;
-  margin-top: -56px;
+  padding-top: 90px;
+  margin-top: -86px;
 }
 
 .main-logs h2 {
@@ -303,8 +306,7 @@ html.is-drawerActive {
   counter-reset: chap_number;
 }
 
-.main-logs section.preplay::before,
-.main-logs section.chap::before {
+.main-logs section[id]::before {
   width: 1.2em;
   font-size: xx-large;
   font-weight: bold;
@@ -312,10 +314,11 @@ html.is-drawerActive {
   background-color: brown;
   border-radius: 12px 12px 0 0;
   position: relative;
-  bottom: -2em;
+  bottom: -1.5em;
   display: flex;
   justify-content: center;
   margin-top: -1.8em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .main-logs section.chap[id]::before {
@@ -422,7 +425,7 @@ html.is-drawerActive {
   width: 2.4em;
   height: 2px;
   filter: brightness(130%) saturate(70%);
-  margin-right: 0.4em;
+  margin-right: .4em;
 }
 
 .participants .player-name {
@@ -454,7 +457,7 @@ html.is-drawerActive {
 }
 
 .nav-list li {
-  margin-bottom: 0.8em;
+  margin-bottom: .8em;
 }
 
 .nav-list figure {
@@ -462,7 +465,7 @@ html.is-drawerActive {
 }
 
 .chatlog {
-  padding-left: 0.2em;
+  padding-left: .2em;
   width: 100%;
 }
 
@@ -539,21 +542,18 @@ input[checkbox] {
 
 .chatlog .timestamp {
   color: hsl(225, 2%, 30%);
-  font-size: 0.6em;
-  margin: 0 16px 4px 0.8em;
+  font-size: .6em;
+  margin: 0 16px 4px .8em;
 }
 
 .is-disable-timestamp .timestamp {
   display: none;
 }
 
-.tab1 {
-  padding-left: 0;
-}
-
 .tab2,
 .tab3 {
   margin-left: 2.2em;
+  padding-left: 8px;
   text-indent: 0;
   background: hsl(250, 12%, 95.4%);
   border-left: 5px hsl(235.7, 5.6%, 49%) double;
@@ -581,7 +581,6 @@ input[checkbox] {
 
 /* ========== */
 
-
 /* メディアクエリ */
 
 @media screen and (max-width:500px) {
@@ -594,9 +593,39 @@ input[checkbox] {
   }
 }
 
-@media screen and (min-width:501px) {
+@media screen and (min-width: 501px) and (max-width: 850px) {
   .is-drawerActive .navigation {
       width: 60dvw;
+  }
+}
+
+@media screen and (min-width: 851px) {
+  .nav button {
+    display: none;
+  }
+  .navigation {
+      width: 30svw;
+      /* メディアクエリの方で設定 */
+      position: fixed;
+      height: 100svh;
+      background-color: white;
+      box-shadow: 0 10px 10px 0 rgb(0, 0, 0);
+      overflow-y: auto;
+      right: 0;
+      pointer-events: visible;
+      overscroll-behavior: contain;
+      display: flex;
+      flex-direction: column;
+      transition: none;
+      -webkit-transition: none;
+      transform: none;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .main {
+    width: 65vw;
   }
 }
 

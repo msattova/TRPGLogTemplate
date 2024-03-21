@@ -6,6 +6,7 @@ const root = document.documentElement;
 
 const imageclipBox = document.querySelector('#js-checkboxImageclip');
 const removeNotMain = document.querySelector('#js-checkboxRemove');
+const removeTimestamp = document.querySelector('#js-timestampRemove');
 
 
 
@@ -35,6 +36,11 @@ imageclipBox.addEventListener('change', (e) => {
 removeNotMain.addEventListener('change', (e) => {
   mainArea.classList.toggle("is-disable");
 })
+
+removeTimestamp.addEventListener('change', (e) => {
+  mainArea.classList.toggle("is-disable-timestamp");
+})
+
 
 // escapeキーでハンバーガーメニューを閉じる
 document.addEventListener("keydown", (e) => {

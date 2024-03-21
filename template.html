@@ -23,6 +23,7 @@
   <link rel="stylesheet" type="text/css" href="personalstyle.css" />
 
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
+
 </head>
 
 <body>
@@ -44,68 +45,101 @@
         <input type="checkbox" name="remove" id="js-checkboxRemove" checked />
         <label for="js-checkboxRemove">メインタブ以外を非表示</label>
       </div>
+      <div class="disable-check">
+        <input type="checkbox" name="remove" id="js-timestampRemove" checked />
+        <label for="js-timestampRemove">タイムスタンプを非表示</label>
+      </div>
       <div class="check">
         <input type="checkbox" name="imageclip" id="js-checkboxImageclip" />
         <label for="js-checkboxImageclip">画像を小さく表示</label>
       </div>
       <ul class="nav-list" id="charactor-list">
         <li>
-          <div class="chara chara-1">
-            <div class="charactor-name">
-              PC1 (<a href="#" target="_blank">キャラクターシート</a>)
-            </div>
-            <div class="player-name">PL1</div>
+          <figure class="chara chara-1">
+            <figcaption>
+              <div class="charactor-name">
+                PC1 (<a href="#" target="_blank">キャラクターシート</a>)
+              </div>
+              <div class="player-name">PL1</div>
+            </figcaption>
             <div class="charactor-image">
               <img src="./pics/500x500.png" alt="PC1の立ち絵" />
             </div>
-          </div>
+          </figure>
         </li>
         <li>
-          <div class="chara chara-2">
-            <div class="charactor-name">
-              PC2 (<a href="#" target="_blank">キャラクターシート</a>)
-            </div>
-            <div class="player-name">PL2</div>
+          <figure class="chara chara-2">
+            <figcaption>
+              <div class="charactor-name">
+                PC2 (<a href="#" target="_blank">キャラクターシート</a>)
+              </div>
+              <div class="player-name">PL2</div>
+            </figcaption>
             <div class="charactor-image">
-              <img src="./pics/500x1200.png" alt="PC2の立ち絵" />
+              <img src="./pics/480x600.png" alt="PC2の立ち絵" />
             </div>
-          </div>
+          </figure>
         </li>
         <li>
-          <div class="chara chara-3">
-            <div class="charactor-name">
-              PC3 (<a href="#" target="_blank">キャラクターシート</a>)
-            </div>
-            <div class="player-name">PL3</div>
+          <figure class="chara chara-3">
+            <figcaption>
+              <div class="charactor-name">
+                PC3 (<a href="#" target="_blank">キャラクターシート</a>)
+              </div>
+              <div class="player-name">PL3</div>
+            </figcaption>
             <div class="charactor-image">
-              <img src="./pics/480x600.png" alt="PC3の立ち絵" />
+              <img src="./pics/500x1200.png" alt="PC3の立ち絵" />
             </div>
-          </div>
+          </figure>
         </li>
         <li>
-          <div class="chara chara-4">
-            <div class="charactor-name">
-              PC4 (<a href="#" target="_blank">キャラクターシート</a>)
-            </div>
-            <div class="player-name">PL4</div>
+          <figure class="chara chara-4">
+            <figcaption>
+              <div class="charactor-name">
+                PC4 (<a href="#" target="_blank">キャラクターシート</a>)
+              </div>
+              <div class="player-name">PL4</div>
+            </figcaption>
             <div class="charactor-image">
               <img src="./pics/780x400.png" alt="PC4の立ち絵" />
             </div>
-          </div>
+          </figure>
         </li>
       </ul>
     </nav>
 
-    <main class="main is-disable" id="js-main">
+    <main class="main is-disable is-disable-timestamp" id="js-main">
       <section class="participants">
         <h2>参加者</h2>
-        <ul>
-          <li class="gm">GM</li>
-          <li class="pl chara-1">PL</li>
-          <li class="pl chara-2">PL</li>
-          <li class="pl chara-3">PL</li>
-          <li class="pl chara-4">PL</li>
-        </ul>
+
+<ul class="grid-container">
+  <li class="subgrid-container gm">
+    <div class="grid-item role">GM</div>
+    <div class="grid-item player-name">GM</div>
+    <div class="grid-item"></div>
+  </li>
+  <li class="subgrid-container pl chara-1">
+    <div class="grid-item role">PL</div>
+    <div class="grid-item player-name">PL1</div>
+    <div class="grid-item charactor-name">PC1</div>
+  </li>
+  <li class="subgrid-container pl chara-2">
+    <div class="grid-item role">PL</div>
+    <div class="grid-item player-name">PL2</div>
+    <div class="grid-item charactor-name">PC2</div>
+  </li>
+  <li class="subgrid-container pl chara-3">
+    <div class="grid-item role">PL</div>
+    <div class="grid-item player-name">PL3</div>
+    <div class="grid-item charactor-name">PC3</div>
+  </li>
+  <li class="subgrid-container pl chara-4">
+    <div class="grid-item role">PL</div>
+    <div class="grid-item player-name">PL4</div>
+    <div class="grid-item charactor-name">PC4</div>
+  </li>
+</ul>
       </section>
       <section class="index" id="index">
         <h2>目次</h2>
@@ -123,7 +157,6 @@
           <details>
             <summary>クリックしてキャラメイクログを開く</summary>
             <div class="chatlog">
-              <p class="message chara-1 tab1"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
               <p class="message chara-1 tab2"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
               <p class="message chara-2 tab3"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
               <p class="message chara-3 tab2"><span class="name">user</span> 2d6<span class="timestamp">[00:00]</span></p>
@@ -257,8 +290,9 @@
       <!--権利表記など-->
     </div>
   </footer>
-</body>
 
 <script src="script.js"></script>
+
+</body>
 
 </html>

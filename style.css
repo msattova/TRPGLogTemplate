@@ -231,6 +231,10 @@ html.is-drawerActive {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
+  display: grid;
+  grid-template-columns:
+    [name] auto
+    [message] 1fr;
 }
 
 /* main クラス関連 */
@@ -243,6 +247,7 @@ html.is-drawerActive {
   min-height: 100%;
   bottom: 0;
   overflow-wrap: break-word;
+  word-break: break-all;
   padding-top: 60px;
 }
 
@@ -362,18 +367,72 @@ html.is-drawerActive {
   background-color: hsl(293, 70%, 30%);
 }
 
-.participants ul {
-  font-weight: bold;
-  list-style: circle;
+/* grid */
+
+.participants ul.grid-container {
+  display: grid;
+  row-gap: 8px;
+  grid-template-columns: [role] auto [playername] 1fr;
+  grid-template-rows: auto;
+  padding-left: 0;
+}
+
+.participants ul.grid-container >li.subgrid-container {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: min-content;
+  align-items: center;
+  grid-column: span 2;
+  /** word-break: break-all; **/
+  border-left: 2px solid var(--my-color);
+}
+
+.participants .grid-container .grid-item {
+  padding: 2px;
+  grid-column: 2 / 4;
+  grid-row: auto;
   display: flex;
-  flex-direction: column;
+  place-items: center;
+}
+
+.participants .grid-container .charactor-name {
+  display: grid;
+  grid-template-columns:
+    [dash] 3em
+    [name] 1fr;
+  align-items: center;
+  justify-items: start;
+  text-align: start;
+  font-size: smaller;
+}
+
+.participants .grid-container .charactor-name::before {
+  content: '';
+  width: 2.4em;
+  height: 2px;
+  filter: brightness(130%) saturate(70%);
+  margin-right: 0.4em;
+}
+
+.participants .player-name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.participants .pl .role,
+.participants .gm .role {
+  font-weight: bold;
+  font-size: 80%;
+  margin-right: 6px;
+  background-color: var(--my-color);
+  color: white;
+  padding: 0 8px;
+  grid-column: 1;
+  height: fit-content;
+  align-self: flex-start;
 }
 
 /* ====== */
-
-.chatlog {
-  padding-left: 1em;
-}
 
 .nav-list {
   list-style: none;
@@ -385,6 +444,16 @@ html.is-drawerActive {
 
 .nav-list li {
   margin-bottom: 0.8em;
+}
+
+.nav-list figure {
+  margin: 0;
+}
+
+.chatlog {
+  padding-left: 1em;
+  display: grid;
+  grid-template-rows: auto;
 }
 
 .chara {
@@ -399,12 +468,12 @@ html.is-drawerActive {
   font-weight: bold;
 }
 
-.player-name {
+.nav-list .player-name {
   font-size: small;
 }
 
-.player-name::before {
-  content: "PL: ";
+.nav-list .player-name::before {
+  content: "PL:";
   font-size: small;
 }
 
@@ -445,7 +514,7 @@ input[checkbox] {
 
 /* tekey対応用 */
 
-.diceroll::before {
+.diceroll span.name::before {
   content: "";
   display: inline-block;
   width: 1em;
@@ -457,10 +526,14 @@ input[checkbox] {
   margin-right: 4px;
 }
 
-.chatlog span.timestamp {
+.chatlog .timestamp {
   color: hsl(225, 2%, 30%);
   font-size: 10px;
   margin: 0 16px 4px 0.8em;
+}
+
+.is-disable-timestamp .timestamp {
+  display: none;
 }
 
 .tab1 {

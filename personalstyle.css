@@ -1,31 +1,39 @@
+:root {
+  --pc1-color: seagreen;
+  --pc2-color: chocolate;
+  --pc3-color: steelblue;
+  --pc4-color: palevioletred;
+  --gm-color: black;
+}
+
 .chara-1 {
-  color: seagreen;
+  --my-color: var(--pc1-color);
+  color: var(--my-color);
 }
 
 .chara-2 {
-  color: chocolate;
+  --my-color: var(--pc2-color);
+  color: var(--my-color);
 }
 
 .chara-3 {
-  color: steelblue;
+  --my-color: var(--pc3-color);
+  color: var(--my-color);
 }
 
 .chara-4 {
-  color: palevioletred;
+  --my-color: var(--pc4-color);
+  color: var(--my-color);
 }
 
 .gm {
-  color: black;
+  --my-color: var(--gm-color);
+  color: var(--my-color);
 }
 
-.gm::before {
-  content: 'GM: ';
-  font-weight: bold;
-  font-size: 1.2em;
+.participants li .charactor-name::before {
+  background-color: var(--my-color);
 }
 
-.pl::before {
-  content: 'PL: ';
-  font-weight: bold;
-  font-size: 1.2em;
-}
+
+

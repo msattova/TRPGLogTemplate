@@ -60,6 +60,8 @@ body {
   margin: 6px 0 6px 0;
 }
 
+/*  ハンバーガーメニュー  */
+
 .nav {
   position: absolute;
   right: 0;
@@ -184,7 +186,7 @@ html.is-drawerActive {
 }
 
 .is-drawerActive .navigation {
-  width: 60dvw;
+  width: 60dvw; /* メディアクエリの方で設定 */
   position: fixed;
   transform: translateX(0);
   height: 100svh;
@@ -216,6 +218,8 @@ html.is-drawerActive {
   clip-path: inset(50%);
   margin: -1px;
 }
+
+/*  ========  */
 
 .name {
   grid-column: 3;
@@ -490,6 +494,7 @@ html.is-drawerActive {
 }
 
 .charactor-image img {
+  /* メディアクエリの方で設定 */
   max-width: 92%;
   max-height: 48lvh;
 }
@@ -575,3 +580,24 @@ input[checkbox] {
 }
 
 /* ========== */
+
+
+/* メディアクエリ */
+
+@media screen and (max-width:500px) {
+  .is-drawerActive .navigation {
+    width: 90dvw;
+  }
+  .charactor-image img {
+    max-width: 70%;
+    max-height: 48lvh;
+  }
+}
+
+@media screen and (min-width:501px) {
+  .is-drawerActive .navigation {
+      width: 60dvw;
+  }
+}
+
+/* ================ */

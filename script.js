@@ -21,7 +21,6 @@ const handleAreaChange = (e) => {
   } else {
     navigation.inert = !root.classList.contains("is-drawerActive");
   }
-  console.log(navigation.inert);
 }
 
 const scrollprevent = (e) => {
@@ -41,7 +40,6 @@ hamburgerButton.addEventListener('click', (e) => {
   footerArea.inert = !footerArea.inert;
   navigation.inert = !navigation.inert;
   root.classList.toggle("is-drawerActive");
-  console.log(mainArea.inert, navigation.inert);
 })
 
 

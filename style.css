@@ -230,7 +230,7 @@ html.is-drawerActive {
 
 .text {
   grid-column: 3;
-  padding-left: 1.2em;
+  padding-left: 1em;
 }
 
 .message {
@@ -240,7 +240,7 @@ html.is-drawerActive {
   padding-bottom: 0.2em;
   margin: 0;
   padding-left: 0;
-  column-gap: 4px;
+  column-gap: 2px;
   align-items: center;
 }
 
@@ -459,9 +459,7 @@ html.is-drawerActive {
 
 .chatlog {
   padding-left: 0.2em;
-  position: relative;
-  left: -1.5em;
-  width: calc(100% + 1.5em);
+  width: 100%;
 }
 
 .chara {

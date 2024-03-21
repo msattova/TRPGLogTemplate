@@ -218,6 +218,7 @@ html.is-drawerActive {
 }
 
 .name {
+  grid-column: 3;
   font-weight: bold;
 }
 
@@ -227,10 +228,20 @@ html.is-drawerActive {
   margin-right: 0.4em;
 }
 
+.text {
+  grid-column: 3;
+  padding-left: 1.2em;
+}
+
 .message {
+  display: grid;
+  grid-template-columns: 1em min-content 1fr;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
+  padding-left: 0;
+  column-gap: 4px;
+  align-items: center;
 }
 
 /* main クラス関連 */
@@ -447,9 +458,10 @@ html.is-drawerActive {
 }
 
 .chatlog {
-  padding-left: 1em;
-  display: grid;
-  grid-template-rows: auto;
+  padding-left: 0.2em;
+  position: relative;
+  left: -1.5em;
+  width: calc(100% + 1.5em);
 }
 
 .chara {
@@ -510,7 +522,7 @@ input[checkbox] {
 
 /* tekey対応用 */
 
-.diceroll span.name::before {
+.diceroll::before {
   content: "";
   display: inline-block;
   width: 1em;
@@ -538,8 +550,8 @@ input[checkbox] {
 
 .tab2,
 .tab3 {
-  padding-left: 3.6em;
-  text-indent: -1em;
+  margin-left: 2.2em;
+  text-indent: 0;
   background: hsl(250, 12%, 95.4%);
   border-left: 5px hsl(235.7, 5.6%, 49%) double;
 }
@@ -551,11 +563,11 @@ input[checkbox] {
   padding-right: 3px;
 }
 
-.tab2::before {
+.tab2 .name::before {
   content: "【サブ】";
 }
 
-.tab3::before {
+.tab3 .name::before {
   content: "【雑談】";
 }
 

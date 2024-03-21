@@ -498,8 +498,8 @@ html.is-drawerActive {
 
 .charactor-image img {
   /* メディアクエリの方で設定 */
-  max-width: 92%;
-  max-height: 48lvh;
+  max-width: 50vw;
+  max-height: 30lvh;
 }
 
 /* 画像を正方形にトリミングする際の設定 */
@@ -587,10 +587,6 @@ input[checkbox] {
   .is-drawerActive .navigation {
     width: 90dvw;
   }
-  .charactor-image img {
-    max-width: 70%;
-    max-height: 48lvh;
-  }
 }
 
 @media screen and (min-width: 501px) and (max-width: 850px) {
@@ -626,6 +622,10 @@ input[checkbox] {
   }
   .main {
     width: 65vw;
+  }
+  .charactor-image img {
+    max-width: 25vw;
+    max-height: 25vh;
   }
 }
 

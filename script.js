@@ -10,6 +10,40 @@ const removeTimestamp = document.querySelector('#js-timestampRemove');
 
 const mediaQuery = window.matchMedia('(min-width: 851px)');
 
+
+const regTabClass = /tab[0-9]/;
+const regCharaClass = /chara-[0-9]/;
+
+const sections = document.querySelectorAll(".main-logs section");
+
+const joinMessage = () => {
+  for (let sec of sections) {
+    const messages = sec.querySelectorAll(".chatlog div.message");
+    for( let i in messages ){
+      if (i == 0) {
+        continue;
+      }
+      if (messages[i].children === undefined) {
+        continue;
+      }
+      if (messages[i].classList.contains('diceroll')) {
+        continue
+      }
+      const matchName = messages[i].children[0].textContent === messages[i-1].children[0].textContent;
+      const matchTab = regTabClass.exec(messages[i].classList.value)[0] === regTabClass.exec(messages[i-1].classList.value)[0];
+      const matchNameColor = messages[i].attributes.style.textContent === messages[i-1].attributes.style.textContent;
+
+      if ( matchName
+          && matchTab
+          && matchNameColor) {
+            messages[i].classList.add('joined');
+      }
+    }
+  }
+}
+
+
+
 const initialize = () => {
   imageclipBox.checked = false;
   removeNotMain.checked = true;
@@ -64,43 +98,5 @@ removeTimestamp.addEventListener('change', (e) => {
 initialize();
 
 handleAreaChange(mediaQuery);
-
-const regTabClass = /tab[0-9]/;
-
-const sections = document.querySelectorAll(".main-logs section");
-
-const joinMessage = () => {
-  for (let sec of sections) {
-    const messages = sec.querySelectorAll(".chatlog div.message");
-    console.log(messages);
-    for( let i in messages ){
-      if (i == 0) {
-        continue;
-      }
-      if (messages[i].children === undefined) {
-        continue;
-      }
-
-      if (messages[i].classList.contains('diceroll')) {
-        continue
-      }
-
-      if (messages[i].children[0].textContent === messages[i-1].children[0].textContent
-          && regTabClass.exec(messages[i].classList.value)[0] === regTabClass.exec(messages[i-1].classList.value)[0]
-          && messages[i].attributes.style.textContent === messages[i-1].attributes.style.textContent) {
-            messages[i].classList.add('joined');
-            console.log('CAN  JOIN');
-      }
-      /*
-      console.log(messages[i]);
-      console.log(messages[i].children);
-      console.log(messages[i].children[0].textContent);
-      console.log('tab name', regTabClass.exec(messages[i].classList.value));
-      console.log(messages[i].attributes.style);
-      */
-    }
-  }
-
-}
 
 joinMessage();

@@ -1,33 +1,33 @@
 :root {
-  --pc1-color: seagreen;
-  --pc2-color: chocolate;
-  --pc3-color: steelblue;
-  --pc4-color: palevioletred;
-  --gm-color: black;
+  --part0-color: black;
+  --part1-color: seagreen;
+  --part2-color: chocolate;
+  --part3-color: steelblue;
+  --part4-color: palevioletred;
 }
 
-.chara-1 {
-  --my-color: var(--pc1-color);
+.part0 {
+  --my-color: var(--part0-color);
   color: var(--my-color);
 }
 
-.chara-2 {
-  --my-color: var(--pc2-color);
+.part1 {
+  --my-color: var(--part1-color);
   color: var(--my-color);
 }
 
-.chara-3 {
-  --my-color: var(--pc3-color);
+.part2 {
+  --my-color: var(--part2-color);
   color: var(--my-color);
 }
 
-.chara-4 {
-  --my-color: var(--pc4-color);
+.part3 {
+  --my-color: var(--part3-color);
   color: var(--my-color);
 }
 
-.gm {
-  --my-color: var(--gm-color);
+.part4 {
+  --my-color: var(--part4-color);
   color: var(--my-color);
 }
 

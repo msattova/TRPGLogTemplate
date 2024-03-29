@@ -299,7 +299,7 @@ html.is-drawerActive {
 }
 
 .main-logs h2 {
-  padding-left: 2em;
+  padding-left: 3.6em
 }
 
 /* 章番号表示 */
@@ -309,7 +309,8 @@ html.is-drawerActive {
 }
 
 .main-logs section[id]::before {
-  width: 1.2em;
+  width: fit-content;
+  padding: 0 8px;
   font-size: xx-large;
   font-weight: bold;
   color: aliceblue;
@@ -430,7 +431,8 @@ html.is-drawerActive {
   margin-right: .4em;
 }
 
-.participants .player-name {
+.participants .pl-name,
+.participants .gm-name {
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -447,7 +449,6 @@ html.is-drawerActive {
   height: fit-content;
   align-self: flex-start;
 }
-
 /* ====== */
 
 .nav-list {

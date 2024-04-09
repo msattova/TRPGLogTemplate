@@ -52,7 +52,9 @@ const drawBar = (canvas, ratio, value, max) => {
   ctx.font = `bold ${height*0.7}px sans-serif`;
   ctx.textBaseline = "top";
   ctx.strokeStyle = "#000"
+  ctx.strokeText(`${value}/${max}`, width-width*0.96, height*0.2, width*0.8);
   ctx.fillText(`${value}/${max}`, width-width*0.96, height*0.2, width*0.8);
+
 };
 
 

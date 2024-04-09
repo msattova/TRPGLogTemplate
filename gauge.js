@@ -17,11 +17,14 @@ const roundBar = (ctx, x, y, w, h, r, stroke_color, fill_color) => {
   ctx.fill();
 };
 
-const drawBackground = (canvas) => {
+
+
+const drawBar = (canvas, ratio, value, max) => {
   const ctx = canvas.getContext("2d");
   const width = canvas.width-1;
   const height = canvas.height;
-  //roundBar(ctx, 0, 0, width, canvas.height, canvas.height/2-1, "#000", "#efefef");
+
+  //空のバーを描画
   ctx.beginPath();
   ctx.lineWidth = 1;
   ctx.strokeStyle = `#000`;
@@ -31,14 +34,9 @@ const drawBackground = (canvas) => {
   ctx.fill();
   ctx.closePath();
 
-};
-
-const drawBar = (canvas, ratio) => {
   if (ratio == 0) { return; }
-  const ctx = canvas.getContext("2d");
-  const width = canvas.width-1;
-  const height = canvas.height;
-  //roundBar(ctx, 0, 0, (width-1)*ratio, canvas.height, canvas.height/2-1, "#000", "#00ab60");
+
+  //現在値を示すバーの描画
   ctx.beginPath();
   ctx.lineWidth = 1;
   ctx.strokeStyle = `#000`;
@@ -47,23 +45,35 @@ const drawBar = (canvas, ratio) => {
   ctx.stroke();
   ctx.fill();
   ctx.closePath();
-};
 
-const drawStatus = (canvas, value, max) => {
-  const ctx = canvas.getContext("2d");
-  const width = canvas.width-1;
-  const height = canvas.height;
+  //最大値と現在値を示す数値の描画
   ctx.lineWidth = 1;
   ctx.fillStyle = "#fff";
   ctx.font = `bold ${height*0.7}px sans-serif`;
-  ctx.textBaseline = "alphabetic";
+  ctx.textBaseline = "top";
   ctx.strokeStyle = "#000"
-  ctx.fillText(`${value}/${max}`, width-width*0.96, height*0.72, width*0.8);
+  ctx.fillText(`${value}/${max}`, width-width*0.96, height*0.2, width*0.8);
+};
+
+
+const canvasCorrection = (canvas, w, h) => {
+  //参考： https://developer.mozilla.org/ja/docs/Web/API/Window/devicePixelRatio
+  const ctx = canvas.getContext("2d");
+  //表示サイズを設定
+  canvas.style.width = `${w}px`;
+  canvas.style.height = `${h}px`;
+  // メモリ上における実際のサイズを設定
+  const scale = window.devicePixelRatio;
+  canvas.width = Math.floor(w*scale);
+  canvas.height = Math.floor(h*scale);
+
+  // css上のピクセル数を前提としているシステムに合わせる
+  //ctx.scale(scale, scale);
+
 };
 
 const resize = (canvas, w, h) => {
-  canvas.width = w;
-  canvas.height = h;
+  canvasCorrection(canvas, w, h);
 };
 
 const allGaugesDraw = () => {
@@ -73,31 +83,17 @@ const allGaugesDraw = () => {
     const value = el.dataset.value;
     const ratio = ((max-min) != 0) ? value / (max - min) : 0;
     // div.gaugeにcanvas要素を挿入
-    const backgroundCanvas = document.createElement("canvas");
-    backgroundCanvas.classList.add('background');
-    el.append(backgroundCanvas);
-    const background = el.querySelector("canvas.background");
-
     const barCanvas = document.createElement("canvas");
+    const barContent = document.createTextNode(`${value} / ${max}`);
     barCanvas.classList.add('bar');
+    barCanvas.appendChild(barContent);
     el.append(barCanvas);
     const bar = el.querySelector("canvas.bar");
 
-
-    const statusCanvas = document.createElement("canvas");
-    const statusContent = document.createTextNode(`${value} / ${max}`);
-    statusCanvas.classList.add('status');
-    statusCanvas.appendChild(statusContent);
-    el.append(statusCanvas);
-    const status = el.querySelector("canvas.status");
-
     //canvasのサイズを親要素と同じにする
-    resize(background, el.offsetWidth, el.offsetHeight);
-    drawBackground(background);
     resize(bar, el.offsetWidth, el.offsetHeight);
-    drawBar(bar, ratio);
-    resize(status, el.offsetWidth, el.offsetHeight);
-    drawStatus(status, value, max);
+    drawBar(bar, ratio, value, max);
+
   });
 };
 

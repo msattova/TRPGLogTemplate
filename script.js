@@ -84,15 +84,27 @@ hamburgerButton.addEventListener('click', (e) => {
 
 
 imageclipBox.addEventListener('change', (e) => {
-  document.querySelector('#charactor-list').classList.toggle("is-imageclip");
+  if(e.target.checked){
+    document.querySelector('#charactor-list').classList.add("is-imageclip");
+  } else {
+    document.querySelector('#charactor-list').classList.remove("is-imageclip");
+  }
 })
 
 removeNotMain.addEventListener('change', (e) => {
-  mainArea.classList.toggle("is-disable");
+  if (e.target.checked) {
+    mainArea.classList.add("is-disable");
+  } else {
+    mainArea.classList.remove("is-disable");
+  }
 })
 
 removeTimestamp.addEventListener('change', (e) => {
-  mainArea.classList.toggle("is-disable-timestamp");
+  if (e.target.checked) {
+    mainArea.classList.add("is-disable-timestamp");
+  } else {
+    mainArea.classList.remove("is-disable-timestamp");
+  }
 })
 
 initialize();

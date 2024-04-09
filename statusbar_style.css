@@ -1,0 +1,64 @@
+.status-view {
+  ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .statusbar {
+    border-left: 3px solid var(--my-color);
+  }
+
+  .name {
+    grid-column: auto;
+  }
+  .name::after {
+    display: none;
+  }
+
+  .statusbar {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .hp, .mp {
+    color: #333;
+    padding-left: 1em;
+    display: grid;
+    grid-template-columns:
+        [label] 2.8em
+        [bar] minmax(min-content, 1fr)
+        [value] 6em;
+    place-content: center;
+    justify-items: baseline;
+    align-items: center;
+  }
+  .label {
+    grid-column: 1;
+  }
+  .gauge {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  meter, .gauge {
+    padding: 2px 8px;
+    margin: 0 4px;
+    width: 96%;
+    height: 1.2em;
+  }
+  .gauge>canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .value {
+    font-size: .8em;
+    display: grid;
+    align-items: center;
+  }
+
+}

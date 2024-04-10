@@ -518,6 +518,7 @@
               </article>
             </div>
           </details>
+          <div class="to-index"><a href="#index">【目次へ戻る】</a></div>
         </section>
         <section class="chap" id="sec-1">
           <h2>章題</h2>
@@ -594,7 +595,17 @@
               <div class="name">user</div>
               <div class="text"> test<span class="timestamp">[00:00]</span></div>
             </div>
+            <div class="request">
+              <h3>依頼タイトル / 見出し</h3>
+              <div class="content">
+                依頼内容依頼内容<br>
+                依頼内容依頼内容依頼内容依頼内容<br>
+                依頼内容依頼内容依頼内容依頼内容依頼内容依頼内容<br>
+                依頼内容依頼内容依頼内容依頼内容依頼内容依頼内容依頼内容依頼内容依頼内容依頼内容<br>
+              </div>
+            </div>
           </div>
+          <div class="to-index"><a href="#index">【目次へ戻る】</a></div>
         </section>
         <section class="chap" id="sec-2">
           <h2>長めの章～～～～～～～～～題～～～～～～～～～～～</h2>
@@ -756,48 +767,136 @@
                 </div>
               </article>
             </div>
+
+            <!-- 戦闘時の状況提示 -->
             <div class="status-view">
-              <ul>
-                <li class="part1">
-                  <div class="name">PC1</div>
+              <div class="area-wrapper">
+                <div class="position">【敵軍後方エリア】</div>
+                <div class="area">
+                <div class="part0">
+                  <div class="name">敵03</div>
                   <div class="statusbar">
-                    <div class="hp"><div class="label">HP</div><meter min="0" max="10" value="10">10/10</meter><span class="value">10/10</span></div>
-                    <div class="mp"><div class="label">MP</div><meter min="0" max="20" value="15">15/20</meter><span class="value">15/20</span></div>
+                    <div class="hp">
+                      <div class="label">HP</div>
+                      <div class="gauge" data-max="108" data-value="8"></div>
+                      <div class="value">8/108</div>
+                    </div>
+                    <div class="mp">
+                      <div class="label">MP</div>
+                      <div class="gauge" data-max="236" data-value="116"></div>
+                      <div class="value">116/236</div>
+                    </div>
                   </div>
-                </li>
-              </ul>
-            </div>
-            <div class="status-view">
-              <ul>
-                <li class="part2">
+                </div>
+                </div>
+              </div>
+
+              <div class="area-wrapper">
+                <div class="position">【前線エリア】</div>
+                <div class="area">
+                <div class="part0">
+                  <div class="name">敵01</div>
+                  <div class="statusbar">
+                    <div class="hp">
+                      <div class="label">HP</div>
+                      <div class="gauge" data-max="24" data-value="24"></div>
+                      <div class="value">24/24</div>
+                    </div>
+                    <div class="mp">
+                      <div class="label">MP</div>
+                      <div class="gauge" data-max="16" data-value="16"></div>
+                      <div class="value">16/16</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="part0">
+                  <div class="name">敵02</div>
+                  <div class="statusbar">
+                    <div class="hp">
+                      <div class="label">HP</div>
+                      <div class="gauge" data-max="24" data-value="8"></div>
+                      <div class="value">8/24</div>
+                    </div>
+                    <div class="mp">
+                      <div class="label">MP</div>
+                      <div class="gauge" data-max="6" data-value="6"></div>
+                      <div class="value">6/6</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="part2">
                   <div class="name">PC2</div>
                   <div class="statusbar">
                     <div class="hp">
-                      <div class="label">HP</div><meter min="0" max="50" value="10">10/50</meter><span class="value">10/50</span>
+                      <div class="label">HP</div>
+                      <div class="gauge" data-max="46" data-value="16"></div>
+                      <div class="value">16/46</div>
                     </div>
                     <div class="mp">
-                      <div class="label">MP</div><meter min="0" max="0" value="0">0/0</meter><span class="value">0/0</span>
+                      <div class="label">MP</div>
+                      <div class="gauge" data-max="56" data-value="1"></div>
+                      <div class="value">1/56</div>
                     </div>
                   </div>
-                </li>
-              </ul>
-            </div>
-            <div class="status-view">
-              <ul>
-                <li class="part3">
-                  <div class="name">PC3</div>
+                </div>
+                <div class="part4">
+                  <div class="name">PC4</div>
                   <div class="statusbar">
                     <div class="hp">
-                      <div class="label">HP</div><div class="gauge" data-max="36" data-value="10"></div><div class="value">10/36</div>
+                      <div class="label">HP</div>
+                      <div class="gauge" data-max="28" data-value="28"></div>
+                      <div class="value">28/28</div>
                     </div>
                     <div class="mp">
-                      <div class="label">MP</div><div class="gauge" data-max="0" data-value="0"></div><span class="value">0/0</span>
+                      <div class="label">MP</div>
+                      <div class="gauge" data-max="19" data-value="1"></div>
+                      <div class="value">1/19</div>
                     </div>
                   </div>
-                </li>
-              </ul>
+                </div>
+                </div>
+              </div>
+
+              <div class="area-wrapper">
+                <div class="position">【自軍後方エリア】</div>
+                <div class="area">
+                  <div class="part1">
+                    <div class="name">PC1</div>
+                    <div class="statusbar">
+                      <div class="hp">
+                        <div class="label">HP</div>
+                        <div class="gauge" data-max="36" data-value="10"></div>
+                        <div class="value">10/36</div>
+                      </div>
+                      <div class="mp">
+                        <div class="label">MP</div>
+                        <div class="gauge" data-max="0" data-value="0"></div>
+                        <div class="value">0/0</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="part3">
+                    <div class="name">PC3</div>
+                    <div class="statusbar">
+                      <div class="hp">
+                        <div class="label">HP</div>
+                        <div class="gauge" data-max="46" data-value="2"></div>
+                        <div class="value">2/46</div>
+                      </div>
+                      <div class="mp">
+                        <div class="label">MP</div>
+                        <div class="gauge" data-max="20" data-value="10"></div>
+                        <div class="value">10/20</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
+
           </div>
+          <div class="to-index"><a href="#index">【目次へ戻る】</a></div>
         </section>
         <section class="chap" id="sec-3">
           <h2>章題</h2>
@@ -875,6 +974,7 @@
               <div class="text"> test<span class="timestamp">[00:00]</span></div>
             </div>
           </div>
+          <div class="to-index"><a href="#index">【目次へ戻る】</a></div>
         </section>
         <section class="chap" id="sec-4">
           <h2>章題</h2>
@@ -935,6 +1035,14 @@
               <div class="name">user</div>
               <div class="text"> test<span class="timestamp">[00:00]</span></div>
             </div>
+
+            <div class="still">
+              <figure>
+                <img src="./pics/780x400.png" alt="スチル">
+                <figcaption>スチルのコメント</figcaption>
+              </figure>
+            </div>
+
             <div class="message part3 tab1" style="color: steelblue">
               <div class="name">user</div>
               <div class="text"> test<span class="timestamp">[00:00]</span></div>
@@ -952,6 +1060,7 @@
               <div class="text"> test<span class="timestamp">[00:00]</span></div>
             </div>
           </div>
+          <div class="to-index"><a href="#index">【目次へ戻る】</a></div>
         </section>
       </div>
     </main>

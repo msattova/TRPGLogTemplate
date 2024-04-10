@@ -1,13 +1,8 @@
 .status-view {
-  ul {
-    list-style: none;
-    width: 100%;
-    padding: 0;
-  }
 
-  .statusbar {
-    border-left: 3px solid var(--my-color);
-  }
+  width: 100%;
+  padding: 0;
+  margin: .6em 0;
 
   .name {
     grid-column: auto;
@@ -17,20 +12,21 @@
   }
 
   .statusbar {
+    border-left: 3px solid var(--my-color);
     display: grid;
     grid-template-rows: 1fr 1fr;
   }
 
   .hp, .mp {
     color: #333;
-    padding-left: 1em;
+    padding-left: .8em;
     display: grid;
     grid-template-columns:
-        [label] 2.8em
+        [label] 2.2em
         [bar] minmax(min-content, 1fr)
-        [value] 6em;
+        [value] 3.8em;
     place-content: center;
-    justify-items: baseline;
+    justify-items: start;
     align-items: center;
   }
   .label {
@@ -46,7 +42,7 @@
   meter, .gauge {
     padding: 2px 8px;
     margin: 0 4px;
-    width: 96%;
+    width: 98%;
     height: 1.2em;
   }
   .gauge>canvas {
@@ -56,9 +52,60 @@
     left: 0;
   }
   .value {
+    padding-left: 4px;
     font-size: .8em;
     display: grid;
     align-items: center;
   }
 
+  .position {
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    margin: 0;
+    text-align: left;
+    outline: 0;
+    position: relative;
+    opacity: .6;
+    padding-bottom: .6em;
+
+    &::before {
+        content: "○";
+        color: black;
+      }
+
+  }
+
+  .area-wrapper {
+    border-radius: 30px;
+    box-shadow: 0 0 8px #ccc;
+    padding: .6em 1.2em;
+    margin: 12px 0;
+  }
+
+  .area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: .4em;
+    column-gap: 8px;
+
+    .name {
+      padding: 0 .6em 0 .4em;
+      background-color: var(--my-color);
+      color: #fff;
+      width: fit-content;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  .status-view {
+    .area {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }

@@ -62,7 +62,7 @@ const drawBar = (canvas, ratio, value, max) => {
 
 };
 
-
+// canvasのサイズ・解像度補正
 const canvasCorrection = (canvas, w, h) => {
   //参考： https://developer.mozilla.org/ja/docs/Web/API/Window/devicePixelRatio
   const ctx = canvas.getContext("2d");
@@ -82,6 +82,8 @@ const canvasCorrection = (canvas, w, h) => {
 const resize = (canvas, w, h) => {
   canvasCorrection(canvas, w, h);
 };
+
+
 const reset = () => {
   gauges.filter((el) => el !== undefined).forEach((el, i) => {
     el.innerHTML = '';

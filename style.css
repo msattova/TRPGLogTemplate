@@ -8,6 +8,7 @@ html {
   font-size: 0;
   overflow-x: clip;
   overscroll-behavior-y: none;
+  width: 100%;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   line-height: normal;
   overflow-x: clip;
   overscroll-behavior-y: none;
+  width: 100%;
 }
 
 .header {
@@ -190,7 +192,8 @@ html.is-drawerActive {
 }
 
 .is-drawerActive .navigation {
-  width: 60dvw; /* メディアクエリの方で設定 */
+  width: 60dvw;
+  /* メディアクエリの方で設定 */
   position: fixed;
   top: 60px;
   transform: translateX(0);
@@ -256,6 +259,7 @@ html.is-drawerActive {
 /* main クラス関連 */
 
 .main {
+  width: 100%;
   position: relative;
   margin: 8px;
   padding-left: 1.8em;
@@ -341,7 +345,7 @@ html.is-drawerActive {
   padding: 12px 16px;
   padding-top: 6px;
   margin: 8px 18px;
-  background: url(./resources/noise.svg);
+  background: url(/resources/noise.svg);
   background-blend-mode: hard-light;
 
   border-radius: 6px 36px / 34px 18px;
@@ -384,17 +388,32 @@ html.is-drawerActive {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
+
   figure {
     img {
       display: block;
       margin: 0 auto;
-      width: 100%;
+      max-height: 42vh;
       height: auto;
       object-fit: cover;
+      filter: drop-shadow(0 0 2px #0a0a0a);
     }
+
     figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: small;
       font-style: italic;
+      font-weight: bold;
+      opacity: .9;
+      color: #fff;
+      filter: drop-shadow(0 0 3px #999) drop-shadow(0 0 2px #333) drop-shadow(0 0 1px #0a0a0a);
     }
   }
 }
@@ -468,7 +487,7 @@ html.is-drawerActive {
   padding-left: 0;
 }
 
-.participants ul.grid-container >li.subgrid-container {
+.participants ul.grid-container>li.subgrid-container {
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: min-content;
@@ -489,8 +508,7 @@ html.is-drawerActive {
 .participants .grid-container .charactor-name {
   display: grid;
   grid-template-columns:
-    [dash] 3em
-    [name] 1fr;
+    [dash] 3em [name] 1fr;
   align-items: center;
   justify-items: start;
   text-align: start;
@@ -523,6 +541,7 @@ html.is-drawerActive {
   height: fit-content;
   align-self: flex-start;
 }
+
 /* ====== */
 
 .nav-list {
@@ -577,6 +596,25 @@ html.is-drawerActive {
   /* メディアクエリの方で設定 */
   max-width: 50vw;
   max-height: 30lvh;
+}
+
+figure .copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  top: 0;
+  font-size: small;
+
+  margin-top: -8px;
+
+  a,
+  a:visited {
+    color: #fff;
+    text-shadow: 0 0 10px #000, 0 0 5px #000, -.1em .1em .2em #000, .1em -.1em .2em #000;
+  }
+
 }
 
 /* 画像を正方形にトリミングする際の設定 */
@@ -655,7 +693,7 @@ input[checkbox] {
   padding-right: 3px;
 }
 
-.is-disable [class*=tab]:not(.tab1){
+.is-disable [class*=tab]:not(.tab1) {
   display: none;
 }
 
@@ -663,7 +701,7 @@ input[checkbox] {
 
 /* 発言者まとめ用 */
 
-.main .chatlog .joined .name{
+.main .chatlog .joined .name {
   display: none;
 }
 
@@ -675,9 +713,11 @@ input[checkbox] {
   .is-drawerActive .navigation {
     width: 90%;
   }
+
   .main {
     padding: 0;
   }
+
   .data {
     padding: 0;
   }
@@ -685,7 +725,7 @@ input[checkbox] {
 
 @media screen and (min-width: 501px) and (max-width: 850px) {
   .is-drawerActive .navigation {
-      width: 60%;
+    width: 60%;
   }
 }
 
@@ -693,30 +733,34 @@ input[checkbox] {
   .nav button {
     display: none;
   }
+
   .navigation {
-      width: 30%;
-      /* メディアクエリの方で設定 */
-      position: fixed;
-      height: 100%;
-      background-color: white;
-      box-shadow: 0 2px 5px 0 rgb(0, 0, 0);
-      overflow-y: auto;
-      right: 0;
-      pointer-events: visible;
-      overscroll-behavior: contain;
-      display: flex;
-      flex-direction: column;
-      transition: none;
-      -webkit-transition: none;
-      transform: none;
+    width: 30%;
+    /* メディアクエリの方で設定 */
+    position: fixed;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgb(0, 0, 0);
+    overflow-y: auto;
+    right: 0;
+    pointer-events: visible;
+    overscroll-behavior: contain;
+    display: flex;
+    flex-direction: column;
+    transition: none;
+    -webkit-transition: none;
+    transform: none;
   }
+
   .main {
     width: 70%;
   }
+
   .charactor-image img {
     max-width: 25vw;
     max-height: 25vh;
   }
+
   .footer {
     width: 70%;
   }

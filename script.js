@@ -16,6 +16,23 @@ const regCharaClass = /chara-[0-9]/;
 
 const sections = document.querySelectorAll(".main-logs section");
 
+const makeIndex = () => {
+
+  const ul = document.querySelector("#index ul");
+
+  [].map.call( Object(sections), sec => {
+    const indexResource = document.querySelector("#js-indexList-template").content.cloneNode(true);
+    const sectionTitle = sec.querySelector("h2").textContent;
+    const li = indexResource.querySelector("li");
+    const a = indexResource.querySelector("a");
+    li.setAttribute("class", sec.classList[0]);
+    a.setAttribute("href", `#${sec.id}`);
+    a.textContent = sectionTitle;
+    ul.appendChild(indexResource);
+  });
+
+}
+
 const joinMessage = () => {
   for (let sec of sections) {
     const messages = sec.querySelectorAll(".chatlog div.message");
@@ -41,8 +58,6 @@ const joinMessage = () => {
     }
   }
 }
-
-
 
 const initialize = () => {
   imageclipBox.checked = false;
@@ -108,6 +123,8 @@ removeTimestamp.addEventListener('change', (e) => {
 })
 
 initialize();
+
+makeIndex();
 
 handleAreaChange(mediaQuery);
 

@@ -345,7 +345,7 @@ html.is-drawerActive {
   padding: 12px 16px;
   padding-top: 6px;
   margin: 8px 18px;
-  background: url(/resources/noise.svg);
+  background: url(./resources/noise.svg);
   background-blend-mode: hard-light;
 
   border-radius: 6px 36px / 34px 18px;
